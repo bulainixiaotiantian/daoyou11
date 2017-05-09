@@ -70,7 +70,26 @@
 		click_btn($("#rank"),"#8077bd");
 		
    //侧边栏--------结束-------------------------
-   
+  
+	
+	selected_tabar(0);//让第一个tabbar按钮被选中
+	
+	load(".main","template/index.html")//每次刷新都让.main加载index.html这个组件
+	
+	//点击第1个tabbar按钮--------------------
+	$(".footer div a").eq(0).click(function(){
+		load(".main","template/index.html")
+	});
+	//点击第2个tabbar按钮---------------------
+	$(".footer div a").eq(1).click(function(){
+		$(location).attr("href","component/collect.html")
+	});
+	//点击第3个tabbar按钮---------------------
+	$(".footer div a").eq(2).click(function(){
+		$(location).attr("href","component/mine.html")
+	});
+		
+ 
 	function load(modle,url){
 		$.get(url,null,function(data){
 			$("#loading").show();
@@ -78,24 +97,6 @@
 			$("#loading").hide();
 		})	
 	};
-	
-	
-	load(".main","template/index.html")
-	
-//点击第1个tabbar按钮--------------------
-	$(".footer div a").eq(0).click(function(){
-		load(".main","template/index.html")
-	});
-//点击第2个tabbar按钮---------------------
-	$(".footer div a").eq(1).click(function(){
-		$(location).attr("href","component/collect.html")
-	});
-//点击第3个tabbar按钮---------------------
-	$(".footer div a").eq(2).click(function(){
-		$(location).attr("href","component/mine.html")
-	});
-		
-
 	
 	
 			

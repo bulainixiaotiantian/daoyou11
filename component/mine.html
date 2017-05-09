@@ -66,6 +66,7 @@
 
 	</style>
 	<script src='../js/jquery-3.1.0.js'></script>
+	<script src='../js/index.js'></script>	 
 	<script>
 	
 	
@@ -83,9 +84,11 @@
 			
 		});
 
-			
 	//tabbar按钮加载--------------------------------------------
-		  		
+	
+	
+			selected_tabar(2)//让第三个tabbar按钮被选中状态
+
 			$(".footer div a").eq(0).click(function(){
 				//$(".main").load("template/mine.html");
 				$(location).attr("href","../index.html")
@@ -108,4 +111,4 @@
 	</body>
 </html>
 
-<script src='../js/index.js'></script>	 
+

@@ -1,29 +1,34 @@
 	
 		$(function(){
-			//安卓返回键------------------------------------------
-			
 			
 			//适配尺寸调整----------------------------------------
 			$('html').css("font-size",$(window).width()/750*100+"px")
-			$(window).resize(function(){
+				$(window).resize(function(){
 				$('html').css("font-size",$(window).width()/750*100+"px")
 			});
 			
-			$(".main").load("template/index.html");
+			//$(".main").load("template/index.html");
+			
+			
+			
+			//tabbar跳转路由------------------------------------------
+			function selected_tabar(num){
+				$(".footer a").eq(num).children(".img1").css("display","none");
+				$(".footer a").eq(num).children(".img2").css("display","block");
+				$(".footer a").eq(num).css("color","#fff")
+			}
+			
 			footer_button();
-			
-			
 			//-------------------------------控制首页底部四个按钮------------------------------------------
 			function footer_button(){
 				function getNode(name){
 				
 					$(this).parent().siblings().find(".img1");
 				}
-			
-			
-				$(".footer a").eq(0).children(".img1").css("display","none");
-				$(".footer a").eq(0).children(".img2").css("display","block");
-				$(".footer a").eq(0).css("color","#fff")
+
+				//$(".footer a").eq(0).children(".img1").css("display","none");
+				//$(".footer a").eq(0).children(".img2").css("display","block");
+				//$(".footer a").eq(0).css("color","#fff")
 			
 				$(".footer a").each(function(i){
 					$(this).attr("index",0);//让每一个a有个属性index等于0
