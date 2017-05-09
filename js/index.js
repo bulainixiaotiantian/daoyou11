@@ -8,38 +8,10 @@
 			});
 			
 			//侧边栏-------------------------
-			function aseid(){
-				var $p=$(".aside>p").eq(0);
-				var span_1=$p.find("span").eq(0);
-				var span_man=$p.find("span").eq(1);
-				var span_woman=$p.find("span").eq(2);
-				function click_btn(obj,color,status){
-					if(status){
-						obj.click(function(){
-							obj.css({"background":"#fd8f00","color":"#fff"}).siblings().css({"background":color,"color":"#fff"})
-						})
-					}else{
-						obj.click(function(){
-							obj.css({"background":"#fd8f00","color":"#fff"}).siblings().css({"background":color,"color":"#000"})
-						})
-					}
-				};
-				click_btn(span_1,"#464068",true);
-				click_btn(span_man,"#464068",true);
-				click_btn(span_woman,"#464068",true);
-				click_btn($("#distance"),"#8077bd");
-				click_btn($("#head_price"),"#8077bd");
-				click_btn($("#rank"),"#8077bd");
-			
-			};
 			
 			
 			//tabbar跳转路由------------------------------------------
-			function selected_tabar(num){
-				$(".footer a").eq(num).children(".img1").css("display","none");
-				$(".footer a").eq(num).children(".img2").css("display","block");
-				$(".footer a").eq(num).css("color","#fff")
-			}
+			
 			
 			footer_button();
 			//-------------------------------控制首页底部四个按钮------------------------------------------

@@ -88,6 +88,11 @@
 	
 	
 			selected_tabar(2)//让第三个tabbar按钮被选中状态
+			function selected_tabar(num){
+				$(".footer a").eq(num).children(".img1").css("display","none");
+				$(".footer a").eq(num).children(".img2").css("display","block");
+				$(".footer a").eq(num).css("color","#fff")
+			}
 
 			$(".footer div a").eq(0).click(function(){
 				//$(".main").load("template/mine.html");
