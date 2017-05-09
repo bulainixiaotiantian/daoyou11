@@ -1,0 +1,52 @@
+	
+		<div id="mine">
+			<div class="personal_mes">
+				<div id="mes_head">
+					<img src="images/2.jpg"/>
+				</div>
+				<div class="mes_text">
+					<p id="mes_name">带着微笑的王小思</p>
+					<p id="balance_t">
+						余额 : <span id="balance">¥224</span>
+					</p>
+				</div>
+			</div>
+			<div id="pic" class="clearfix">
+				<img src="images/15.jpg"/>
+				<img src="images/11.jpg"/>
+				<img src="images/13.jpg"/>
+				<img src="images/17.jpg"/>
+				<img src="images/user_button_add_default.png">
+			</div>
+			<div id="become_cont">成为导游<span><img src="images/arrow_06.jpg"/></span></div>
+			<ul class="mine_cont">
+				<li id="add_money">套餐充值<span><img src="images/arrow_06.jpg"/></span></li>
+				<li id="drew_money_detail">余额提现<span><img src="images/arrow_06.jpg"/></span></li>
+			</ul>
+		</div>
+		
+		
+		
+	
+<style>
+body{
+	background: #F5F5F5;
+}
+
+
+</style>
+<script>
+	$("#drew_money_detail").click(function(){		
+		//$("body").load("template/draw_money.html")
+		load("body","template/draw_money.html")
+	})
+	$("#add_money").click(function(){
+		//$("body").load("template/choice_type.html")
+		load("body","template/choice_type.html")
+	});
+	$("#become_cont").click(function(){
+		//$("body").load("template/tour_guide.html")
+		load("body","template/to_be_guide.html")
+	});
+
+</script>
