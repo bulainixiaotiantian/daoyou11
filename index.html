@@ -71,29 +71,33 @@
 		
    //侧边栏--------结束-------------------------
    
-   function load(modle,url){
+	function load(modle,url){
 		$.get(url,null,function(data){
 			$("#loading").show();
 			$(modle).html(data)
 			$("#loading").hide();
 		})	
 	};
-			loadTemplate(0,"template/index.html");
-			loadTemplate(1,"template/collect.html");
-			
-			$(".footer div a").eq(2).click(function(){
-				//$(".main").load("template/mine.html");
-				$(location).attr("href","component/mine.html")
-			});
-				
-			function loadTemplate(num,url){
-				$(".footer div a").eq(num).click(function(){
-				
-				load(".main",url)
-					//$(".main").load(url);
-				});
-			
-			};
+	
+	
+	load(".main","template/index.html")
+	
+//点击第1个tabbar按钮--------------------
+	$(".footer div a").eq(0).click(function(){
+		load(".main","template/index.html")
+	});
+//点击第2个tabbar按钮---------------------
+	$(".footer div a").eq(1).click(function(){
+		$(location).attr("href","component/collect.html")
+	});
+//点击第3个tabbar按钮---------------------
+	$(".footer div a").eq(2).click(function(){
+		$(location).attr("href","component/mine.html")
+	});
+		
+
+	
+	
 			
    </script>
   </body>
