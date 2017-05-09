@@ -36,7 +36,7 @@
 		</div>
 		 <div class="footer">
 		<div>
-			<a href='#'>
+			<a href='../index.html'>
 				<span class="img1 img_one"><img src="../images/tab_icon_home_default.png"><br></span>
 				<span class="img2 img_one"><img src="../images/tab_icon_home_selected.png"><br></span>
 				<span class="text">首页</span>
@@ -94,11 +94,6 @@
 				$(".footer a").eq(num).css("color","#fff")
 			}
 
-			$(".footer div a").eq(0).click(function(){
-				//$(".main").load("template/mine.html");
-				$(window).attr("href","../index.html")
-			});
-			
 			$(".footer div a").eq(1).click(function(){
 				//$(".main").load("template/mine.html");
 				$(location).attr("href","../component/collect.html")
