@@ -37,16 +37,19 @@ body{
 </style>
 <script>
 	$("#drew_money_detail").click(function(){		
-		//$("body").load("template/draw_money.html")
+		
 		load("body","template/draw_money.html")
 	})
 	$("#add_money").click(function(){
-		//$("body").load("template/choice_type.html")
+		
 		load("body","template/choice_type.html")
 	});
 	$("#become_cont").click(function(){
-		//$("body").load("template/tour_guide.html")
-		load("body","template/to_be_guide.html")
+		
+		//load("body","template/to_be_guide.html")
+		
+		$(window).attr("location","template/to_be_guide.html")
+		
 	});
 
 </script>
