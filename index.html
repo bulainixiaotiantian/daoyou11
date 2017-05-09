@@ -9,11 +9,12 @@
 	 
   </head>
 	<body>
+
 	<div id="loading">
 		<img src="images/loading.gif"/>
 	</div>
    <div class="main">
-		
+
    </div>
    <div class='none'></div>
    <div class="footer">
@@ -80,10 +81,10 @@
   };
 			loadTemplate(0,"template/index.html");
 			loadTemplate(1,"template/collect.html");
-			//loadTemplate(2,"template/mine.html");
+			
 			$(".footer div a").eq(2).click(function(){
 				//$(".main").load("template/mine.html");
-				load(".main","template/mine.html")
+				$(location).attr("href","component/mine.html")
 			});
 				
 			function loadTemplate(num,url){
